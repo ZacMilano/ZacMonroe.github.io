@@ -335,52 +335,6 @@ td:last-child {
   padding-right: 0; }
 
 
-/* Dropdown menu stuff
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.dropdownbtn {
-  background-color: #228822;
-  color: white;
-  padding: 0px 90px;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none; /* Hidden by default, until hovered over */
-  position: absolute;
-  background-color: #AA33AA;
-  min-width: 220px;
-  /*padding: 0px 90px;*/
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  background-color: #EEE;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content
- * is shown */
-.dropdown:hover .dropdownbtn {
-  background-color: #3e8e41;
-  color:#FFFFFF;
-}
-
-
 /* Spacing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 button,
@@ -440,6 +394,59 @@ hr {
   content: "";
   display: table;
   clear: both; }
+
+
+/* Dropdown menu stuff
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.dropdownbtn {
+  background-color: #228822;
+  color: white;
+  padding: 0px 90px;
+  margin: 10px 0px 20px;
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown {
+  position: relative;
+  display: block;
+}
+
+.dropdown-content {
+  display: none; /* Hidden by default, until hovered over */
+  position: absolute;
+  background-color: #AA33AA;
+  width: 100%;
+  /*padding: 0px 90px;*/
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  background-color: #EEE;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content
+ * is shown */
+.dropdown:hover .dropdownbtn {
+  background-color: #3e8e41;
+  color:#FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 
 /* Media Queries
