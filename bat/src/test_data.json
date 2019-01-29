@@ -1,0 +1,6 @@
+[
+  {"topic" : "#wall", "botscore" : 0.555},
+  {"topic" : "$twtr", "botscore" : 0.120},
+  {"topic" : "@jack", "botscore" : 0.459},
+  {"topic" : "google.com", "botscore" : 0.998}
+]
