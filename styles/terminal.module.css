@@ -47,5 +47,6 @@
   color: white;
 }
 
-.term-cmd-out {
+.term-cmd-block {
+  display: block;
 }

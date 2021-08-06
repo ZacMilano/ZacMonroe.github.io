@@ -1,26 +1,35 @@
+import { useState } from "react";
+
+import { baseCommand, Command } from "./command";
 import styles from "../../styles/terminal.module.css";
 
 export function Terminal() {
+  const [ history, setHistory ] = useState([baseCommand("~")]);
+
   return (
     <div className={styles["term-window"]}>
       <div className={styles["term-window-bar"]}>
         <button
-          className={[styles["term-window-bar-btn"], styles["close-btn"]].join(
-            " "
-          )}
+          className={`${styles["term-window-bar-btn"]} ${styles["close-btn"]}`}
         />
         <button
-          className={[styles["term-window-bar-btn"], styles["min-btn"]].join(
-            " "
-          )}
+          className={`${styles["term-window-bar-btn"]} ${styles["min-btn"]}`}
         />
         <button
-          className={[styles["term-window-bar-btn"], styles["max-btn"]].join(
-            " "
-          )}
+          className={`${styles["term-window-bar-btn"]} ${styles["max-btn"]}`}
         />
       </div>
-      <div className={styles["term-body"]}></div>
+      <div className={styles["term-body"]}>
+        {history.map(cmd => {
+          <div className={styles["term-cmd-block"]}>
+            <span className={styles["term-cwd"]}>{cmd.workingDirectory}</span>
+            <span className={styles["term-delimiter"]}>{" $ "}</span>
+            <span className={styles["term-cmd-in"]}>{cmd.input}</span>
+            <br />
+            <span className={styles["term-cmd-out"]}>{cmd.output}</span>
+          </div>;
+        })}
+      </div>
     </div>
   );
 }
