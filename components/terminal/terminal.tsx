@@ -1,11 +1,10 @@
 import { useState } from "react";
 
-import { baseCommand, Command } from "./command";
+import { baseHistoryLog, TerminalTopBar } from ".";
 import styles from "../../styles/terminal.module.css";
-import { TerminalTopBar } from "./top-bar";
 
 export function Terminal() {
-  const [history, setHistory] = useState([baseCommand("~")]);
+  const [history, setHistory] = useState([baseHistoryLog("~")]);
 
   return (
     <div className={styles["term-window"]}>
