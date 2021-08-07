@@ -2,23 +2,18 @@ import { useState } from "react";
 
 import { baseCommand, Command } from "./command";
 import styles from "../../styles/terminal.module.css";
+import { TerminalTopBar } from "./top-bar";
 
 export function Terminal() {
   const [history, setHistory] = useState([baseCommand("~")]);
 
   return (
     <div className={styles["term-window"]}>
-      <div className={styles["term-window-bar"]}>
-        <button
-          className={`${styles["term-window-bar-btn"]} ${styles["close-btn"]}`}
-        />
-        <button
-          className={`${styles["term-window-bar-btn"]} ${styles["min-btn"]}`}
-        />
-        <button
-          className={`${styles["term-window-bar-btn"]} ${styles["max-btn"]}`}
-        />
-      </div>
+      <TerminalTopBar
+        onClose={() => {}}
+        onMinimize={() => {}}
+        onMaximize={() => {}}
+      />
       <div className={styles["term-body"]}>
         {history.map((cmd) => {
           return (
