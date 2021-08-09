@@ -14,9 +14,9 @@ export function Terminal() {
         onMaximize={() => {}}
       />
       <div className={styles["term-body"]}>
-        {history.map((cmd) => {
+        {history.map((cmd, idx) => {
           return (
-            <div className={styles["term-cmd-block"]}>
+            <div key={idx} className={styles["term-cmd-block"]}>
               <span className={styles["term-cwd"]}>{cmd.workingDirectory}</span>
               <span className={styles["term-delimiter"]}>{" $ "}</span>
               <span className={styles["term-cmd-in"]}>{cmd.input}</span>
