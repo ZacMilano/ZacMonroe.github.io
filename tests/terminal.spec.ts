@@ -1,5 +1,7 @@
 import { splitInputs } from "../components/terminal";
 
 describe("Terminal command processing", () => {
-	splitInputs("");
+	it("splits a command", () => {
+		splitInputs("");
+	})
 });
